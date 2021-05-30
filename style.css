@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+}
+
+body {
+  height: 100%;
+
+  font-family: 'Lato', sans-serif;
+      
+  overflow-y: hidden;
+  background: #f1f1f0;
+
+}
+
+#container {
+    color: white;
+    height: 100vh;
+    padding: 2rem;
+
+    background: #000428;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #004e92, #000428);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #004e92, #000428); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+/* header */
+header {
+    margin-bottom: 20%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+/* main */
+
+.teste {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.next {
+    color: white;
+    font-size: 18px;
+    background: none;
+
+    border-bottom: 2px solid white;
+}
+
+
+.previous {
+    background: none;
+}
+
+
+main .question {
+    width: 80vw;
+
+    background: #f1f1f01c;
+    border-radius: 20px;
+    
+    padding: 1rem;
+
+    margin: 7% 0;
+}
+
+.question p {
+    font-size: 24px;
+    line-height: 2rem;
+}
+
+.option{
+    display: flex;
+    align-items: center;
+}
+
+.option-group .option {
+    border-radius: 20px;
+    padding: .5rem;
+    background: #f1f1f0d5;
+    margin-bottom: 20px;
+    width: 80vw;
+    height: 40px;
+
+}
+
+
+.option span {
+    vertical-align: middle;
+    display: table-cell;
+    
+    text-align: center;
+
+    font-size: 150%;
+
+    margin-right: 20px;
+
+
+    width: 30px;
+
+    height: 30px;
+
+    border-radius: 50%;
+}
+
+span.option-a {
+    background: #058BC0;
+   
+}
+
+.option-b {
+    background:#2C5288;
+}
+
+.option-c {
+    background: #F2AE30;
+}
+
+
+.option-d {
+    background: #E63946;
+}
+
+
+.option button {
+    background: none;
+    font-size: 18px;
+
+    color: black
+}
+
+@media only screen and (min-height: 600px) {
+    header {
+        margin-bottom: 30%;
+    }
+
+    .teste {
+        margin-bottom: 10%;
+    }
+
+    main .question {
+        margin: 10% 0;
+    }
+}
+
+@media only screen and (max-height: 550px) {
+    body {
+        overflow-y: visible;
+    }
+}
