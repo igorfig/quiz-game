@@ -4,10 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
     <title>Game quiz</title>
   </head>
   <body>
@@ -18,35 +20,47 @@
       </header>
 
       <main>
-        <div class="teste">
-            <button class="previous"><img src="assets/back-button.svg" alt="back" width="30px"></button>
-            <button class="next">Próxima</button>
+        <div class="navigation">
+          <div class="back">
+            <img src="assets/back-button.svg" alt="back" width="18px" />
+            <button class="previous">
+              <span>Voltar</span>
+            </button>
+          </div>
+          <button class="next">Próxima</button>
         </div>
 
         <div class="question">
-          <p>AQUI VAI A QUESTÃO DO QUIZ</p>
+          <p>Quando a Netflix foi fundada?</p>
         </div>
 
-        <div class="option-group">
-          <div class="option">
-            <span class="option-a">A</span>
-            <button>Alternativa A</button>
-          </div>
-          <div class="option">
-            <span class="option-b">B</span>
-            <button>Alternativa B</button>
-          </div>
-          <div class="option">
-            <span class="option-c">C</span>
-            <button>Alternativa C</button>
-          </div>
-
-          <div class="option">
-            <span class="option-d">D</span>
-            <button>Alternativa D</button>
-          </div>
+        <div class="answers-container">
+          <button class="btn-answers btn1">1997</button>
+          <button class="btn-answers btn2">2001</button>
+          <button class="btn-answers btn3">2009</button>
+          <button class="btn-answers btn4">2015</button>
         </div>
       </main>
     </div>
+
+    <script>
+      const btns = [...document.querySelectorAll(".btn-answers")];
+
+      btns.forEach(button => {
+        button.onclick = e => {
+          btns[1].disabled = true;
+          btns[2].disabled = true;
+          btns[3].disabled = true;
+         if(e.target.classList.contains("btn1")) {
+            e.target.classList.add("btn-sucess")
+          } else {
+            e.target.classList.add("btn-fail")
+            btns[0].classList.add("btn-sucess")
+          }   
+      }
+      })
+      
+
+    </script>
   </body>
 </html>
