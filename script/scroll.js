@@ -19,8 +19,6 @@ function scrollToDown(){
  
 window.addEventListener("load", scrollToDown)
 
-document.querySelector(".forward-button-container").addEventListener("click", scrollToDown);
-
 const buttons = document.querySelectorAll(".back-to-top");
 buttons.forEach(button => {
   button.addEventListener("click", scrollToUp);
