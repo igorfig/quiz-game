@@ -1,0 +1,376 @@
+/* global =========================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+}
+
+body {
+  height: 100%;
+  font-family: "Nunito", sans-serif;
+  background: #f1f1f0;
+  
+}
+
+/* container & container childs =========================== */
+
+#container {
+  color: white;
+  padding: 2rem;
+  min-height: 100vh;
+  height: 100%;
+  background: #ff512f;
+  background: -webkit-linear-gradient(
+    to top,
+    #dd2476,
+    #ff512f
+  );
+  background: linear-gradient(
+    to top,
+    #dd2476,
+    #ff512f
+  );
+}
+
+/* header =========================== */
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  padding: 1rem;
+
+}
+
+header h1 {
+  text-align: center;
+
+  margin: 0 auto;
+
+  font-size: 4rem;
+}
+
+header span {
+  font-size: 2rem;
+}
+
+.forward-button-container,
+.btn-answers{
+  background-color: #fff;
+  border-radius: 100px;
+  border-style: none;
+  box-shadow: rgba(0, 0, 0, 0.15) 0 10px 20px 0;
+  font-weight: 800;
+  height: 55px;
+  outline: none;
+}
+
+/* navigation =========================== */
+
+.forward-button-container {
+  width: 150px;
+  display: flex;
+  align-items:  center;
+  justify-content: space-around;
+  margin-left: auto;
+  margin-top: 5%;
+}
+
+.next {
+  margin-left: 28px;
+  background: none;
+  font-weight: 800;
+}
+
+img {
+  margin-right: 10px;
+}
+
+/* question container & childs =========================== */
+
+.question {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.question p {
+  max-width: 50vw;
+  width: 100%;
+  background: #f1f1f01c;
+  border-radius: 20px;
+  margin: 0;
+  margin-top: -5%;
+  font-size: 3rem;
+  text-align: center;
+  padding: 2rem;
+}
+
+/* loader animation container & childs =========================== */
+
+.loader-animation-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.c-loader {
+  border: 3px solid #e5e5e5;
+  border-top-color: #dd2476;
+  height: 300px;
+  width: 300px;
+}
+
+.c-loader {
+  animation: is-rotating 1s infinite;
+  border: 3px solid #e5e5e5;
+  border-radius: 50%;
+  border-top-color: #dd2476;
+  height: 100px;
+  width: 100px;
+}
+
+@keyframes is-rotating {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+
+/* answers button container & buttons =========================== */
+.answers-container {
+  display: grid;
+  grid-template-columns: 400px 400px;
+  margin: 0;
+  margin-top: 40px;
+  gap: 1em;
+  justify-content: center;
+}
+
+.btn-answers {
+  height: 65px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.btn-success {
+  background: linear-gradient(
+      119.32deg,
+      #7bff2a 16.26%,
+      rgba(255, 255, 255, 0) 67.98%
+    ),
+    #59eb00;
+  box-shadow: 0px 1px 20px rgb(99 255 105 / 70%);
+  color: white;
+}
+
+.btn-fail {
+  background: linear-gradient(
+      109.45deg,
+      #ff7373 -7.86%,
+      rgba(255, 255, 255, 0) 79.2%
+    ),
+    #ff4949;
+  box-shadow: 0px 1px 20px #ff7b7b;
+  color: white;
+}
+
+/* final result container & childs =========================== */
+
+.final-result-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.final-result {
+  display:grid;
+  align-items: center;
+  gap: 10px;
+  grid-template-areas: 
+    "score message-container"
+    "score message-container";
+  width: 50vw;
+  height: 350px;
+  background: #f1f1f01c;
+  border-radius: 20px;
+  padding-top: 2rem;
+}
+
+ 
+.final-result p {
+  padding: 1rem;
+  font-size: 2.4rem;
+  text-align: center;
+  grid-area: score;
+}
+
+.message-container {
+  display: grid;
+  grid-area: message-container;
+  grid-template-areas: 
+    "message"
+    "reload";
+
+  align-items: center;
+  height: 100%;
+  padding: 0 1rem;
+  border-left: 2px solid #fff;
+}
+
+.final-result .small-message {
+  font-size: 22px;
+  opacity: .6;
+
+  text-align: justify;
+  grid-area: message;
+
+}
+
+.final-result .reload-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .8rem;
+  background-color: #fff;
+  border-radius: 100px;
+  border-style: none;
+  box-shadow: rgba(0, 0, 0, 0.15) 0 10px 20px 0;
+  font-weight: 800;
+  height: 55px;
+  grid-area: reload;
+}
+
+/* others class =========================== */
+.hide {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.no-display {
+  display: none;
+}
+
+.overflow-hidden {
+  overflow-y: hidden;
+}
+
+/* media queries =========================== */
+
+@media only screen and (max-width: 768px) {
+  /* global =========================== */
+  body {
+    height: 100%;
+  }
+  
+  /* container & container childs =========================== */
+  #container {
+    padding: 1rem;
+  }
+
+  /* header =========================== */
+
+  header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem;
+    margin-bottom: 20%;
+  }
+
+  header h1 {
+    margin: 0;
+    font-size: 32px;
+  }
+
+  header span {
+    font-size: 22px;
+  }
+
+  /* navigation =========================== */
+  .forward-button-container {
+    height: 40px;
+    width: 100px;
+  }
+
+  .forward-button-container .next {
+    margin: 0;
+    margin-left: 10px;
+  }
+
+  img {
+    width: 14px;
+  }
+
+  /* question p =========================== */
+  .question p {
+    max-width: 700px;
+    width: 100%;
+    margin: 0;
+    margin-top: 10%;
+    padding: 0.8rem;
+    font-size: 40px;
+  }
+
+    /* answers container =========================== */
+    .answers-container {
+      grid-template-columns: 1fr;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  
+    .btn-answers {
+      height: 55px;
+      width: 100%;
+    }
+  
+    .btn4 {
+      margin-bottom: 5%;
+    }
+
+    /* final result =========================== */
+
+    .final-result {
+      display: grid;
+      grid-template-areas: 
+        "score"
+        "message-container";
+      
+      gap: 0;
+      padding: 0;
+      max-width: 700px;
+      width: 100%;
+      height: auto;
+      padding: 1rem;
+    }
+  
+    .final-result p {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+    }
+  
+    .message-container {
+      border: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .final-result .small-message {
+      font-size: 18px;
+      margin-top: -20px;
+    }
+  
+    .final-result .reload-button {
+      width: 150px;
+    }
+}
