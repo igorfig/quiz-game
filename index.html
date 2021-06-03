@@ -9,58 +9,54 @@
       href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="src/style.css" />
     <title>Game quiz</title>
   </head>
   <body>
     <div id="container">
       <header>
         <h1>Game Quiz</h1>
-        <span class="progress">3/10</span>
+        <span class="progress"></span>
       </header>
-
+      
       <main>
-        <div class="navigation">
-          <div class="back">
-            <img src="assets/back-button.svg" alt="back" width="18px" />
-            <button class="previous">
-              <span>Voltar</span>
-            </button>
+          <div class="forward-button-container hide">
+            <button class="next">
+              Avançar
+            </button>         
+            <img src="assets/right-arrow.svg" alt="forward" width="18px" onclick="next()" style="cursor:pointer">
           </div>
-          <button class="next">Próxima</button>
-        </div>
-
+          
         <div class="question">
-          <p>Quando a Netflix foi fundada?</p>
+          <p></p>
         </div>
 
+        <div class="final-result-container no-display">
+          <div class="final-result">
+            <p></p>
+            <div class="border"></div>
+            
+            <div class="message-container">
+              <p class="small-message">Que tal tentar mais uma vez? Quem sabe você consegue acertar todas na próxima!</p>
+              <button class="reload-button"><img width="18px"  src="assets/reload.svg" alt="">Refazer</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="loader-animation-container no-display">
+          <div class="c-loader"></div>
+        </div>
+      
         <div class="answers-container">
-          <button class="btn-answers btn1">1997</button>
-          <button class="btn-answers btn2">2001</button>
-          <button class="btn-answers btn3">2009</button>
-          <button class="btn-answers btn4">2015</button>
+          <button class="btn-answers btn1 back-to-top" ></button>
+          <button class="btn-answers btn2 back-to-top"></button>
+          <button class="btn-answers btn3 back-to-top"></button>
+          <button class="btn-answers btn4 back-to-top"></button>
         </div>
       </main>
     </div>
-
-    <script>
-      const btns = [...document.querySelectorAll(".btn-answers")];
-
-      btns.forEach(button => {
-        button.onclick = e => {
-          btns[1].disabled = true;
-          btns[2].disabled = true;
-          btns[3].disabled = true;
-         if(e.target.classList.contains("btn1")) {
-            e.target.classList.add("btn-sucess")
-          } else {
-            e.target.classList.add("btn-fail")
-            btns[0].classList.add("btn-sucess")
-          }   
-      }
-      })
-      
-
+    <script src="src/app.js"></script>
+    <script src="script/scroll.js">
     </script>
   </body>
 </html>
