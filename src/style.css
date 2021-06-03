@@ -41,7 +41,6 @@ header {
   display: flex;
   flex-direction: row;
   align-items: center;
-
   padding: 1rem;
 
 }
@@ -125,6 +124,8 @@ img {
   border-top-color: #dd2476;
   height: 300px;
   width: 300px;
+
+  margin-top: -20%;
 }
 
 .c-loader {
@@ -182,6 +183,7 @@ button {
   box-shadow: 0px 1px 20px #ff7b7b;
   color: white;
 }
+
 
 /* final result container & childs =========================== */
 
